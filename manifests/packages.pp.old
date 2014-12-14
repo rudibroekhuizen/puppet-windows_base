@@ -1,0 +1,12 @@
+# == Class: windows_base::packages
+#
+class windows_base::packages (
+  $package = undef,
+  ){
+
+  package { $package:
+    ensure   => installed,
+    provider => 'chocolatey',
+  }
+
+}
