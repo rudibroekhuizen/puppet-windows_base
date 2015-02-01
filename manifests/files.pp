@@ -15,9 +15,16 @@ class windows_base::files {
   }
 
 # Hiera user data, stored in windows_role_base
-  file { 'C:/ProgramData/PuppetLabs/hiera/var/global.yaml':
-    source             => 'puppet:///modules/windows_role_base/global.yaml',
+  file { 'C:/ProgramData/PuppetLabs/hiera/var':
+    source             => 'puppet:///modules/windows_role_base',
+    recurse            => true
     source_permissions => ignore,
   }
+
+# Hiera user data, stored in windows_role_base
+# file { 'C:/ProgramData/PuppetLabs/hiera/var/global.yaml':
+#   source             => 'puppet:///modules/windows_role_base/global.yaml',
+#   source_permissions => ignore,
+# }
 
 }
