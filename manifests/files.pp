@@ -17,7 +17,7 @@ class windows_base::files {
 # Hiera user data, stored in windows_role_base
   file { 'C:/ProgramData/PuppetLabs/hiera/var':
     source             => 'puppet:///modules/windows_role_base',
-    recurse            => true
+    recurse            => true,
     source_permissions => ignore,
   }
 
