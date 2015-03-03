@@ -77,7 +77,7 @@ class windows_base (
 
 # Install users
   class {'windows_base::users':
-    require                  => Class["windows_base::packages"],
+    require => Class["windows_base::packages"],
   }
   
 }
