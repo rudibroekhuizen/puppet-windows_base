@@ -21,7 +21,7 @@ class windows_base::config {
     data  => '10',
   }
 
-# set low disk space minimum to 0
+# Set low disk space minimum to 0
   registry::value { 'LowDiskSpaceMinimum':
     key   => 'HKLM\SYSTEM\CurrentControlSet\services\LanmanServer\Parameters',
     value => 'LowDiskSpaceMinimum',
