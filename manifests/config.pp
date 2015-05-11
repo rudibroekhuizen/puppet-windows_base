@@ -13,7 +13,7 @@ class windows_base::config {
     ip     => '127.0.0.1',
   }
 
-# Set disk space threshold to 10%
+# Set disk space threshold to 10% to activate event id 2013
   registry::value { 'DiskSpaceThreshold':
     key   => 'HKLM\SYSTEM\CurrentControlSet\services\LanmanServer\Parameters',
     value => 'DiskSpaceThreshold',
@@ -21,7 +21,7 @@ class windows_base::config {
     data  => '10',
   }
 
-# Set low disk space minimum to 0
+# Set low disk space minimum to 0 to activate event id 2013
   registry::value { 'LowDiskSpaceMinimum':
     key   => 'HKLM\SYSTEM\CurrentControlSet\services\LanmanServer\Parameters',
     value => 'LowDiskSpaceMinimum',
