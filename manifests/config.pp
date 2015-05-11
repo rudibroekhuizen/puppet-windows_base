@@ -13,4 +13,20 @@ class windows_base::config {
     ip     => '127.0.0.1',
   }
 
+# Set disk space threshold to 10%
+  registry::value { 'DiskSpaceThreshold':
+    key   => 'HKLM\SYSTEM\CurrentControlSet\services\LanmanServer\Parameters',
+    value => 'DiskSpaceThreshold',
+    type  => 'dword',
+    data  => '10',
+  }
+
+# set low disk space minimum to 0
+  registry::value { 'LowDiskSpaceMinimum':
+    key   => 'HKLM\SYSTEM\CurrentControlSet\services\LanmanServer\Parameters',
+    value => 'LowDiskSpaceMinimum',
+    type  => 'dword',
+    data  => '0',
+  }
+
 }
