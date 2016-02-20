@@ -40,7 +40,7 @@ class windows_base (
                                    provider => chocolatey,
                                  },
 
-  $packages_hash = { 'puppet' => { ensure   => latest,
+  $packages_hash = { 'putty'  => { ensure   => latest,
                                    provider => chocolatey,
                                  },
 
